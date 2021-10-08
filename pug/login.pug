@@ -1,0 +1,7 @@
+doctype html
+html(lang="ru")
+    include mixins.pug 
+    +_head__auth
+        title VPN Owl - Login
+    body
+        +_auth('login', 'Log-in to your', ' account', 'LOG IN', '../img/login.svg', {name: 'email', placeholder: 'E-mail', type: 'email'}, {name: 'password', placeholder: 'Password', type: 'password'})

@@ -1,0 +1,133 @@
+doctype html
+html(lang="ru")
+    include mixins.pug 
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="../styles/style.css")
+        script(defer, src="../scripts/script.js")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        link(rel="stylesheet" href="../styles/order-style.css")
+        title VPN Owl - Order
+    body
+        +_header
+        .main_top
+            .wrapper 
+                |Encrypt your internet connection to protect your data and privacy.
+        .order_title#first
+            .order_title__left 
+                .order_title__block 1
+                .order_title__text Choose
+            .order_title__right
+                .order_title__text subscription
+                .order_title__block
+        .wrapper
+            .subscriptions
+                .subscriptions__type
+                    input(type="radio" id="first_type" name="subscription_type" value="first_type")
+                    label(for="first_type") 
+                        .checkbox_sign 
+                        .subscription__time 1 year
+                        .subscription__footer 
+                            .subscription__price 10$
+                            .subscription__period per month
+                .subscriptions__type
+                    input(type="radio" id="second_type" name="subscription_type" value="second_type")
+                    label(for="second_type") 
+                        .checkbox_sign 
+                        .subscription__time 1 year
+                        .subscription__footer 
+                            .subscription__price 10$
+                            .subscription__period per month
+                .subscriptions__type
+                    input(type="radio" id="third_type" name="subscription_type" value="third_type")
+                    label(for="third_type") 
+                        .checkbox_sign 
+                        .subscription__time 1 year
+                        .subscription__footer 
+                            .subscription__price 10$
+                            .subscription__period per month
+        .order_title#second
+            .order_title__left 
+                .order_title__block 2
+                .order_title__text Select a
+            .order_title__right
+                .order_title__text payment method
+                .order_title__block
+        .wrapper
+            .payment
+                .payment_type
+                    input(type="radio" id="credit_card" name="payment_method" value="credit_card")
+                    label(for="credit_card") 
+                        .checkbox_sign 
+                        div 
+                            .payment__method Credit Cards
+                            .payment__images 
+                                img(src="../img/visa.png" alt="visa")
+                                img(src="../img/mastercard.png" alt="mastercard")
+                .payment_type
+                    input(type="radio" id="crypto" name="payment_method" value="crypto")
+                    label(for="crypto") 
+                        .checkbox_sign 
+                        div 
+                            .payment__method Crypto Currencies
+                            .payment__images 
+                                img(src="../img/bitcoin.png" alt="bitcoin")
+                                img(src="../img/crypto2.png" alt="crypto2")
+                                img(src="../img/crypto3.png" alt="crypto3")
+                .payment_type
+                    input(type="radio" id="paypal" name="payment_method" value="paypal")
+                    label(for="paypal") 
+                        .checkbox_sign 
+                        div 
+                            .payment__method PayPal
+                            .payment__images 
+                                img(src="../img/paypal.png" alt="paypal")
+        .payment_summary 
+            .payment_form
+                .inputs_area 
+                    label(for="first_name") 
+                        p First name
+                        .input 
+                            input(type="text" id="first_name")
+                    label(for="second_name") 
+                        p Second name
+                        .input 
+                            input(type="text" id="second_name")
+                    label(for="card_number") 
+                        p Card Number
+                        .input 
+                            input(type="text" id="card_number")
+                    label(for="exp_month") 
+                        p Expiration Month
+                        .input 
+                            input(type="text" id="exp_month")
+                    label(for="exp_year") 
+                        p Expiration Year
+                        .input 
+                            input(type="text" id="exp_year")
+                .pay_button 
+                    button pay
+            .order_summary 
+                .title Order summary
+                .plan VPN Owl 1-year plan
+                .country_choose 
+                    p Choose 
+                    .select
+                        select(name="country") 
+                            option(value="Canada") Canada
+                            option(value="Russia") Russia
+                            option(value="USA") USA
+                            option(value="Ukraine") Ukraine
+                            option(value="Japan") Japan
+                            option(value="Germany") Germany
+                            option(value="France") France
+                .total 
+                    p Total
+                    p USD $10
+                button.coupon Got a coupon?
+                button.pay pay
+    +_footer

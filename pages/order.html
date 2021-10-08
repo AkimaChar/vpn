@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <script defer src="../scripts/script.js"></script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/order-style.css">
+    <title>VPN Owl - Order</title>
+  </head>
+  <body>
+      <header>
+        <div class="wrapper">
+          <div class="logo"><img class="logo_img" src="../img/desktop_logo.svg">
+            <p class="logo_service-name">VPN <br>OWL</p>
+          </div>
+          <nav><a class="nav_link" href="#">Services</a><a class="nav_link" href="#">Contacts</a><a class="nav_link" href="#">Order</a><a class="nav_link" href="#">Help</a>
+          </nav><a class="account_button" href="#"> </a>
+          <div class="burger_menu__icon"><span> </span></div>
+          <div class="burger_menu__body"><a class="nav_link__mobile" href="#">Services</a><a class="nav_link__mobile" href="#">Contacts</a><a class="nav_link__mobile" href="#">Order</a><a class="nav_link__mobile" href="#">Help</a>
+          </div>
+        </div>
+      </header>
+    <div class="main_top">
+      <div class="wrapper">
+         Encrypt your internet connection to protect your data and privacy.</div>
+    </div>
+    <div class="order_title" id="first">
+      <div class="order_title__left"> 
+        <div class="order_title__block">1</div>
+        <div class="order_title__text">Choose</div>
+      </div>
+      <div class="order_title__right">
+        <div class="order_title__text">subscription</div>
+        <div class="order_title__block"></div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="subscriptions">
+        <div class="subscriptions__type">
+          <input type="radio" id="first_type" name="subscription_type" value="first_type">
+          <label for="first_type"> 
+            <div class="checkbox_sign"> </div>
+            <div class="subscription__time">1 year</div>
+            <div class="subscription__footer"> 
+              <div class="subscription__price">10$</div>
+              <div class="subscription__period">per month</div>
+            </div>
+          </label>
+        </div>
+        <div class="subscriptions__type">
+          <input type="radio" id="second_type" name="subscription_type" value="second_type">
+          <label for="second_type"> 
+            <div class="checkbox_sign"> </div>
+            <div class="subscription__time">1 year</div>
+            <div class="subscription__footer"> 
+              <div class="subscription__price">10$</div>
+              <div class="subscription__period">per month</div>
+            </div>
+          </label>
+        </div>
+        <div class="subscriptions__type">
+          <input type="radio" id="third_type" name="subscription_type" value="third_type">
+          <label for="third_type"> 
+            <div class="checkbox_sign"> </div>
+            <div class="subscription__time">1 year</div>
+            <div class="subscription__footer"> 
+              <div class="subscription__price">10$</div>
+              <div class="subscription__period">per month</div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="order_title" id="second">
+      <div class="order_title__left"> 
+        <div class="order_title__block">2</div>
+        <div class="order_title__text">Select a</div>
+      </div>
+      <div class="order_title__right">
+        <div class="order_title__text">payment method</div>
+        <div class="order_title__block"></div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="payment">
+        <div class="payment_type">
+          <input type="radio" id="credit_card" name="payment_method" value="credit_card">
+          <label for="credit_card"> 
+            <div class="checkbox_sign"> </div>
+            <div> 
+              <div class="payment__method">Credit Cards</div>
+              <div class="payment__images"> <img src="../img/visa.png" alt="visa"><img src="../img/mastercard.png" alt="mastercard"></div>
+            </div>
+          </label>
+        </div>
+        <div class="payment_type">
+          <input type="radio" id="crypto" name="payment_method" value="crypto">
+          <label for="crypto"> 
+            <div class="checkbox_sign"> </div>
+            <div> 
+              <div class="payment__method">Crypto Currencies</div>
+              <div class="payment__images"> <img src="../img/bitcoin.png" alt="bitcoin"><img src="../img/crypto2.png" alt="crypto2"><img src="../img/crypto3.png" alt="crypto3"></div>
+            </div>
+          </label>
+        </div>
+        <div class="payment_type">
+          <input type="radio" id="paypal" name="payment_method" value="paypal">
+          <label for="paypal"> 
+            <div class="checkbox_sign"> </div>
+            <div> 
+              <div class="payment__method">PayPal</div>
+              <div class="payment__images"> <img src="../img/paypal.png" alt="paypal"></div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="payment_summary"> 
+      <div class="payment_form">
+        <div class="inputs_area"> 
+          <label for="first_name"> 
+            <p>First name</p>
+            <div class="input"> 
+              <input type="text" id="first_name">
+            </div>
+          </label>
+          <label for="second_name"> 
+            <p>Second name</p>
+            <div class="input"> 
+              <input type="text" id="second_name">
+            </div>
+          </label>
+          <label for="card_number"> 
+            <p>Card Number</p>
+            <div class="input"> 
+              <input type="text" id="card_number">
+            </div>
+          </label>
+          <label for="exp_month"> 
+            <p>Expiration Month</p>
+            <div class="input"> 
+              <input type="text" id="exp_month">
+            </div>
+          </label>
+          <label for="exp_year"> 
+            <p>Expiration Year</p>
+            <div class="input"> 
+              <input type="text" id="exp_year">
+            </div>
+          </label>
+        </div>
+        <div class="pay_button"> 
+          <button>pay</button>
+        </div>
+      </div>
+      <div class="order_summary"> 
+        <div class="title">Order summary</div>
+        <div class="plan">VPN Owl 1-year plan</div>
+        <div class="country_choose"> 
+          <p>Choose </p>
+          <div class="select">
+            <select name="country"> 
+              <option value="Canada">Canada</option>
+              <option value="Russia">Russia</option>
+              <option value="USA">USA</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="Japan">Japan</option>
+              <option value="Germany">Germany</option>
+              <option value="France">France</option>
+            </select>
+          </div>
+        </div>
+        <div class="total"> 
+          <p>Total</p>
+          <p>USD $10</p>
+        </div>
+        <button class="coupon">Got a coupon?</button>
+        <button class="pay">pay</button>
+      </div>
+    </div>
+  </body>
+    <footer>
+      <div class="wrapper">
+        <div class="links">
+          <div class="links_list"><a class="links_list__link" href="#">VPN OWL</a><a class="links_list__link" href="#">Contacts</a><a class="links_list__link" href="#">Services</a><a class="links_list__link" href="#">Order</a><a class="links_list__link" href="#">Help</a>
+          </div>
+          <div class="links_list"><a class="links_list__link" href="#">PROGRAMMS</a><a class="links_list__link" href="#">Affiliate</a><a class="links_list__link" href="#">Student discount</a><a class="links_list__link" href="#">YouTube creators</a><a class="links_list__link" href="#">Refer a friend</a>
+          </div>
+          <div class="links_list"><a class="links_list__link" href="#">TITLE</a><a class="links_list__link" href="#">Link</a><a class="links_list__link" href="#">Link</a><a class="links_list__link" href="#">Link</a><a class="links_list__link" href="#">Link</a>
+          </div>
+          <div class="links_list"><a class="links_list__link" href="#">TITLE</a><a class="links_list__link" href="#">Link</a><a class="links_list__link" href="#">Link</a><a class="links_list__link" href="#">Link</a><a class="links_list__link" href="#">Link</a>
+          </div>
+        </div>
+        <div class="social-networks"><span class="social-networks_title">Get in touch:</span>
+          <div class="social-networks_logos"><a href="#"><img src="../img/fb.svg" alt="FB-logo"></a><a href="#"><img src="../img/inst.svg" alt="Inst-logo"></a><a href="#"><img src="../img/vk.svg" alt="VK-logo"></a></div>
+        </div>
+      </div>
+    </footer>
+</html>

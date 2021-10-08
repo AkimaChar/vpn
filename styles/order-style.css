@@ -1,0 +1,731 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
+}
+body footer {
+  flex-grow: 1;
+}
+
+.wrapper {
+  width: 73.125%;
+  margin: auto;
+  max-width: none;
+}
+
+.checkbox_sign {
+  background: #ffffff;
+  border: 0.1875vw solid #000000;
+  border-radius: 0.3125vw;
+  width: 1.875vw;
+  height: 1.875vw;
+  transition: 0.3s;
+}
+
+.main_top .wrapper {
+  padding: 3.125vw 0;
+  font-weight: bold;
+  font-size: 1.125vw;
+  line-height: 120%;
+  color: #000000;
+}
+
+.order_title {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 3.75vw;
+  gap: 0.625vw;
+}
+.order_title__left, .order_title__right {
+  display: flex;
+  align-items: center;
+}
+.order_title__left .order_title__block, .order_title__right .order_title__block {
+  background-color: #000;
+  font-weight: 900;
+  font-size: 3.625vw;
+  line-height: 2.625vw;
+  color: #ffffff;
+}
+.order_title__left .order_title__text, .order_title__right .order_title__text {
+  font-weight: 600;
+  font-size: 2.25vw;
+  line-height: 2.625vw;
+  color: #000000;
+}
+.order_title__left .order_title__block {
+  padding-left: 13.4375vw;
+  padding-right: 3.75vw;
+}
+.order_title__right {
+  flex-grow: 1;
+}
+.order_title__right .order_title__block {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.subscriptions {
+  display: grid;
+  align-items: stretch;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.875vw;
+  margin-bottom: 7.1875vw;
+  grid-auto-rows: auto;
+}
+.subscriptions__type input {
+  display: none;
+}
+.subscriptions__type input:checked + label .checkbox_sign {
+  background: #000;
+}
+.subscriptions__type label {
+  cursor: pointer;
+  background: #0675e1;
+  border: 0.3125vw solid #000000;
+  border-radius: 0.3125vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 6.25vw 0;
+  color: #fff;
+  position: relative;
+  transition: background 0.3s;
+}
+.subscriptions__type label * {
+  line-height: 120%;
+}
+.subscriptions__type label .subscription__time {
+  font-weight: bold;
+  font-size: 2.25vw;
+  margin-bottom: 1.625vw;
+  text-transform: uppercase;
+}
+.subscriptions__type label .subscription__price {
+  font-weight: 300;
+  font-size: 4vw;
+}
+.subscriptions__type label .subscription__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subscriptions__type label .subscription__period {
+  font-size: 1.25vw;
+}
+.subscriptions__type label .checkbox_sign {
+  position: absolute;
+  top: 2.5vw;
+  left: 2.5vw;
+}
+.subscriptions__type label:hover {
+  background: #04519e;
+}
+
+.payment {
+  display: grid;
+  align-items: stretch;
+  gap: 1.875vw;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 3.75vw;
+  width: fit-content;
+}
+.payment_type input {
+  display: none;
+}
+.payment_type input:checked + label .checkbox_sign {
+  background: #000;
+}
+.payment_type label {
+  user-select: none;
+  cursor: pointer;
+  border: 0.1875vw solid #000000;
+  border-radius: 0.3125vw;
+  display: flex;
+  align-items: center;
+  gap: 1.875vw;
+  padding: 0.625vw 0.9375vw;
+  padding-right: 3.125vw;
+  color: #000;
+}
+.payment_type label .payment__method {
+  font-weight: 500;
+  font-size: 1.125vw;
+  line-height: 120%;
+  margin-bottom: 0.6875vw;
+}
+.payment_type label .payment__images {
+  display: flex;
+  align-items: center;
+  gap: 0.3125vw;
+}
+.payment_type label .payment__images img {
+  height: 0.875vw;
+}
+.payment_type label .checkbox_sign {
+  width: 1.5625vw;
+  height: 1.5625vw;
+}
+.payment_type label:hover .checkbox_sign {
+  background: #ebebeb;
+}
+
+.payment_summary {
+  display: flex;
+  gap: 1.875vw;
+  padding-left: 13.4375vw;
+  width: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.payment_summary .payment_form {
+  padding-bottom: 6.5625vw;
+}
+.payment_summary .payment_form .inputs_area {
+  margin-bottom: 6.25vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3.125vw 1.875vw;
+}
+.payment_summary .payment_form .inputs_area label {
+  display: block;
+}
+.payment_summary .payment_form .inputs_area label p {
+  font-size: 1vw;
+  line-height: 120%;
+  color: #000000;
+  margin-bottom: 0.1875vw;
+  margin-left: 0.9375vw;
+}
+.payment_summary .payment_form .inputs_area label .input {
+  position: relative;
+  z-index: 1;
+}
+.payment_summary .payment_form .inputs_area label .input input {
+  width: 100%;
+  border: 0.1875vw solid #000000;
+  border-radius: 0.3125vw;
+  padding: 0.625vw 0.9375vw;
+}
+.payment_summary .payment_form .inputs_area label .input::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  border: 0.1875vw solid #000000;
+  border-radius: 0.3125vw;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  transition: 0.3s;
+}
+.payment_summary .payment_form .inputs_area label .input:focus-within::before {
+  bottom: -0.5vw;
+  right: -0.4375vw;
+}
+.payment_summary .payment_form .inputs_area label:nth-of-type(1), .payment_summary .payment_form .inputs_area label:nth-of-type(2), .payment_summary .payment_form .inputs_area label:nth-of-type(3) {
+  grid-column: span 2;
+}
+.payment_summary .payment_form .pay_button {
+  position: relative;
+  z-index: 1;
+  width: 16.875vw;
+}
+.payment_summary .payment_form .pay_button button {
+  display: block;
+  width: 100%;
+  background: #0675e1;
+  border: 0.1875vw solid #000000;
+  border-radius: 0.3125vw;
+  font-weight: bold;
+  font-size: 1.5vw;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 1.3125vw 5.625vw;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.payment_summary .payment_form .pay_button::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  border: 0.1875vw solid #000000;
+  border-radius: 0.3125vw;
+  width: 100%;
+  height: 100%;
+  bottom: -0.5vw;
+  right: -0.4375vw;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+.payment_summary .payment_form .pay_button:hover::before {
+  bottom: 0;
+  right: 0;
+}
+.payment_summary .order_summary {
+  background-color: #000;
+  color: #fff;
+  padding: 1.3125vw 13.4375vw 1.3125vw 2.0625vw;
+}
+.payment_summary .order_summary .title {
+  font-weight: bold;
+  font-size: 1.5vw;
+  line-height: 120%;
+  margin-bottom: 0.875vw;
+}
+.payment_summary .order_summary .plan {
+  font-size: 1vw;
+  line-height: 120%;
+  margin-bottom: 2.0625vw;
+}
+.payment_summary .order_summary .country_choose {
+  margin-bottom: 2.5vw;
+}
+.payment_summary .order_summary .country_choose p {
+  font-size: 1vw;
+  margin-left: 0.5vw;
+  margin-bottom: 0.5625vw;
+  line-height: 120%;
+}
+.payment_summary .order_summary .total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.25vw;
+}
+.payment_summary .order_summary .total p {
+  font-weight: bold;
+  font-size: 1.5vw;
+  line-height: 120%;
+}
+.payment_summary .order_summary .coupon {
+  font-size: 1vw;
+  line-height: 120%;
+  text-decoration-line: underline;
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 0;
+  cursor: pointer;
+}
+.payment_summary .order_summary .pay {
+  display: none;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 21.0625vw;
+}
+.select select {
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  flex: 1;
+  padding: 0.9375vw 0.5vw;
+  color: #fff;
+  background: #000000;
+  border: 0.1875vw solid #ffffff;
+  border-radius: 0.3125vw;
+  background-image: none;
+  cursor: pointer;
+}
+.select select::-ms-expand {
+  display: none;
+}
+.select::after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 2.5vw;
+  transition: 0.25s all ease;
+  pointer-events: none;
+  background-image: url("../img/expand.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.9375vw;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    width: 85%;
+  }
+
+  .checkbox_sign {
+    border: 0.1875vw solid #000000;
+    border-radius: 0.3125vw;
+    width: 2.1875vw;
+    height: 2.1875vw;
+  }
+
+  .main_top .wrapper {
+    padding: 3.75vw 0;
+    font-size: 1.625vw;
+  }
+
+  .order_title {
+    margin-bottom: 4.375vw;
+    gap: 0.9375vw;
+  }
+  .order_title__left .order_title__block, .order_title__right .order_title__block {
+    font-size: 4vw;
+    line-height: 3.375vw;
+  }
+  .order_title__left .order_title__text, .order_title__right .order_title__text {
+    font-weight: 600;
+    font-size: 2.875vw;
+    line-height: 3.375vw;
+  }
+  .order_title__left .order_title__block {
+    padding-left: 7.8125vw;
+    padding-right: 5vw;
+  }
+
+  .subscriptions {
+    gap: 2.1875vw;
+    margin-bottom: 7.8125vw;
+  }
+  .subscriptions__type label {
+    padding: 7.5vw 0;
+  }
+  .subscriptions__type label .subscription__time {
+    font-size: 2.625vw;
+    margin-bottom: 1.5625vw;
+  }
+  .subscriptions__type label .subscription__price {
+    font-size: 4.0625vw;
+  }
+  .subscriptions__type label .subscription__period {
+    font-size: 1.75vw;
+  }
+  .subscriptions__type label .checkbox_sign {
+    top: 2.8125vw;
+    left: 2.8125vw;
+  }
+
+  .payment {
+    gap: 2.1875vw;
+    margin-bottom: 4.375vw;
+  }
+  .payment_type label {
+    gap: 1.875vw;
+    padding: 0.9375vw 1.875vw;
+    padding-right: 3.125vw;
+  }
+  .payment_type label .payment__method {
+    font-size: 1.625vw;
+    margin-bottom: 0.9375vw;
+  }
+  .payment_type label .payment__images {
+    gap: 0.5vw;
+  }
+  .payment_type label .payment__images img {
+    height: 1.5625vw;
+  }
+  .payment_type label .checkbox_sign {
+    width: 1.875vw;
+    height: 1.875vw;
+  }
+
+  .payment_summary {
+    gap: 2.5vw;
+    padding-left: 7.8125vw;
+  }
+  .payment_summary .payment_form {
+    padding-bottom: 9.375vw;
+  }
+  .payment_summary .payment_form .inputs_area {
+    margin-bottom: 6.25vw;
+    gap: 3.125vw 2.1875vw;
+  }
+  .payment_summary .payment_form .inputs_area label p {
+    font-size: 1.25vw;
+    margin-bottom: 0.5vw;
+    margin-left: 0.9375vw;
+  }
+  .payment_summary .payment_form .inputs_area label .input input {
+    padding: 0.75vw 1.25vw;
+  }
+  .payment_summary .payment_form .pay_button {
+    width: 18.75vw;
+  }
+  .payment_summary .payment_form .pay_button button {
+    font-size: 2vw;
+    padding: 1.5625vw;
+  }
+  .payment_summary .order_summary {
+    padding: 3.125vw 7.8125vw 3.125vw 3.125vw;
+  }
+  .payment_summary .order_summary .title {
+    font-size: 2vw;
+    margin-bottom: 1.125vw;
+  }
+  .payment_summary .order_summary .plan {
+    font-size: 1.25vw;
+    margin-bottom: 2.5vw;
+  }
+  .payment_summary .order_summary .country_choose {
+    margin-bottom: 2.5vw;
+  }
+  .payment_summary .order_summary .country_choose p {
+    font-size: 1.25vw;
+    margin-left: 0.625vw;
+    margin-bottom: 0.9375vw;
+  }
+  .payment_summary .order_summary .total {
+    margin-bottom: 1.25vw;
+  }
+  .payment_summary .order_summary .total p {
+    font-size: 2vw;
+  }
+  .payment_summary .order_summary .coupon {
+    font-size: 1.25vw;
+  }
+
+  .select {
+    width: 25vw;
+  }
+  .select select {
+    padding: 0.9375vw 0.9375vw;
+  }
+  .select::after {
+    width: 3.75vw;
+    background-size: 1.25vw;
+  }
+}
+@media (max-width: 640px) {
+  .wrapper {
+    width: 92%;
+  }
+
+  .checkbox_sign {
+    border: 0.8vw solid #000000;
+    border-radius: 1.3333333333vw;
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .main_top .wrapper {
+    padding-top: 5.3333333333vw;
+    padding-bottom: 10.6666666667vw;
+    font-size: 3.7333333333vw;
+    width: 80%;
+    margin-right: auto;
+    margin-left: 4vw;
+  }
+
+  .order_title {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    margin-bottom: 10.6666666667vw;
+    gap: 2.1333333333vw;
+  }
+  .order_title__left .order_title__block, .order_title__right .order_title__block {
+    font-size: 15.4666666667vw;
+    line-height: 9.3333333333vw;
+  }
+  .order_title__left .order_title__text, .order_title__right .order_title__text {
+    font-size: 9.6vw;
+    line-height: 9.3333333333vw;
+  }
+  .order_title__right .order_title__block {
+    height: 9.3333333333vw;
+  }
+  .order_title__left .order_title__block {
+    padding-left: 3.7333333333vw;
+  }
+  .order_title#first .order_title__left .order_title__block {
+    padding-right: 18.9333333333vw;
+  }
+  .order_title#first .order_title__right {
+    margin-left: 21.3333333333vw;
+  }
+  .order_title#second .order_title__left .order_title__block {
+    padding-right: 16.8vw;
+  }
+  .order_title#second .order_title__right {
+    margin-left: 10.6666666667vw;
+  }
+
+  .subscriptions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5.3333333333vw;
+    margin-bottom: 21.3333333333vw;
+  }
+  .subscriptions__type label {
+    border: 1.3333333333vw solid #000000;
+    border-radius: 0;
+    padding: 4vw 0;
+  }
+  .subscriptions__type label .subscription__time {
+    font-size: 6.4vw;
+    margin-bottom: 4vw;
+  }
+  .subscriptions__type label .subscription__price {
+    font-weight: 300;
+    font-size: 12.8vw;
+  }
+  .subscriptions__type label .subscription__footer {
+    flex-direction: row;
+    gap: 6.6666666667vw;
+  }
+  .subscriptions__type label .subscription__period {
+    font-size: 5.3333333333vw;
+    position: relative;
+  }
+  .subscriptions__type label .subscription__period::before {
+    position: absolute;
+    content: "";
+    width: 14.4vw;
+    height: 0.8vw;
+    background-color: #fff;
+    transform: rotate(101.73deg);
+    top: 2.6666666667vw;
+    left: -9.8666666667vw;
+  }
+  .subscriptions__type label .checkbox_sign {
+    top: 4vw;
+    left: 4vw;
+  }
+
+  .payment {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5.3333333333vw;
+    width: 72vw;
+    margin: 0 auto;
+    margin-bottom: 13.3333333333vw;
+  }
+  .payment_type label {
+    border: 0.8vw solid #000000;
+    border-radius: 1.3333333333vw;
+    gap: 8vw;
+    padding: 2.6666666667vw 4vw;
+    padding-right: 4vw;
+  }
+  .payment_type label .payment__method {
+    font-size: 4.8vw;
+    margin-bottom: 2.9333333333vw;
+  }
+  .payment_type label .payment__images {
+    gap: 1.3333333333vw;
+  }
+  .payment_type label .payment__images img {
+    height: 4vw;
+  }
+  .payment_type label .checkbox_sign {
+    width: 6.6666666667vw;
+    height: 6.6666666667vw;
+  }
+
+  .payment_summary {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .payment_summary .payment_form {
+    padding-bottom: 16vw;
+    width: 92%;
+    margin: 0 auto;
+  }
+  .payment_summary .payment_form .inputs_area {
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5.3333333333vw 8vw;
+  }
+  .payment_summary .payment_form .inputs_area label p {
+    font-size: 4.2666666667vw;
+    margin-bottom: 0.8vw;
+    margin-left: 4vw;
+  }
+  .payment_summary .payment_form .inputs_area label .input input {
+    border: 0.8vw solid #000000;
+    border-radius: 1.3333333333vw;
+    padding: 2.6666666667vw 4vw;
+  }
+  .payment_summary .payment_form .inputs_area label .input::before {
+    border: 0.8vw solid #000000;
+    border-radius: 1.3333333333vw;
+  }
+  .payment_summary .payment_form .inputs_area label .input:focus-within::before {
+    bottom: -2.1333333333vw;
+    right: -1.8666666667vw;
+  }
+  .payment_summary .payment_form .pay_button {
+    display: none;
+  }
+  .payment_summary .order_summary {
+    width: 100%;
+    padding: 8vw 4.8vw 20vw 4.8vw;
+  }
+  .payment_summary .order_summary .title {
+    font-size: 6.4vw;
+    margin-bottom: 3.7333333333vw;
+  }
+  .payment_summary .order_summary .plan {
+    font-size: 4.2666666667vw;
+    margin-bottom: 8.8vw;
+  }
+  .payment_summary .order_summary .country_choose {
+    margin-bottom: 10.6666666667vw;
+  }
+  .payment_summary .order_summary .country_choose p {
+    font-size: 4.2666666667vw;
+    margin-left: 2.1333333333vw;
+    margin-bottom: 2.4vw;
+  }
+  .payment_summary .order_summary .total {
+    margin-bottom: 5.3333333333vw;
+  }
+  .payment_summary .order_summary .total p {
+    font-size: 6.4vw;
+  }
+  .payment_summary .order_summary .coupon {
+    font-size: 4.2666666667vw;
+  }
+  .payment_summary .order_summary .pay {
+    display: block;
+    margin: 0 auto;
+    margin-top: 16vw;
+    border: 0.8vw solid #ffffff;
+    border-radius: 1.3333333333vw;
+    font-weight: bold;
+    font-size: 6.4vw;
+    line-height: 7.7333333333vw;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 5.6vw 29.8666666667vw;
+    background-color: #000;
+  }
+
+  .select {
+    width: 100%;
+  }
+  .select select {
+    padding: 4vw 2.1333333333vw;
+    border: 0.8vw solid #ffffff;
+    border-radius: 1.3333333333vw;
+    font-size: 4.2666666667vw;
+  }
+  .select::after {
+    width: 10.6666666667vw;
+    background-size: 4vw;
+  }
+}

@@ -1,0 +1,566 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: Lato;
+  font-style: normal;
+  color: #000;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+a,
+button {
+  text-decoration: none;
+  outline: none;
+}
+a:active, a:hover, a:visited,
+button:active,
+button:hover,
+button:visited {
+  text-decoration: none;
+  outline: none;
+}
+
+.wrapper {
+  margin: auto;
+  width: 73.125%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header .auth_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.1979166667vw;
+  gap: 0.3645833333vw;
+  margin-bottom: 3.125vw;
+}
+header .auth_logo img {
+  width: 3.6458333333vw;
+  height: 3.6458333333vw;
+}
+header .auth_logo span {
+  font-weight: 900;
+  font-size: 1.25vw;
+  line-height: 90%;
+  color: #000000;
+}
+header .auth_title {
+  display: flex;
+  align-items: stretch;
+  background-color: #000;
+}
+header .auth_title * {
+  background-color: #000;
+  font-weight: 900;
+  font-size: 2.5vw;
+  line-height: 121%;
+  color: #ffffff;
+  padding-bottom: 0.1041666667vw;
+}
+header .auth_title__first {
+  padding-right: 0.3125vw;
+  padding-left: 11.1979166667vw;
+}
+header .auth_title__last {
+  padding-left: 0.3125vw;
+  flex-grow: 1;
+}
+
+main .wrapper {
+  padding-top: 3.125vw;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+main .wrapper #form {
+  width: 24.4791666667vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .wrapper #form .inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5625vw;
+}
+main .wrapper #form .inputs .input {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+main .wrapper #form .inputs .input input {
+  width: 100%;
+  border: 3px solid #000000;
+  border-radius: 0.2604166667vw;
+  padding: 1.0416666667vw 1.25vw;
+  padding-right: 2.34375vw;
+  font-size: 1.25vw;
+  line-height: 121%;
+}
+main .wrapper #form .inputs .input input::placeholder {
+  color: #8d8d8d;
+}
+main .wrapper #form .inputs .input button {
+  cursor: pointer;
+  position: absolute;
+  width: 1.5104166667vw;
+  height: 1.5104166667vw;
+  top: calc((100% - 1.65vw) / 2);
+  right: 1.0416666667vw;
+  border: none;
+  background-color: #fff;
+  background-size: 1.0416666667vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main .wrapper #form .inputs .input button.hidden {
+  background-image: url(../img/password_hidden.png);
+}
+main .wrapper #form .inputs .input button.visible {
+  background-image: url(../img/password_visible.png);
+}
+main .wrapper #form .inputs .input::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  border: 3px solid #000000;
+  border-radius: 0.2604166667vw;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  transition: 0.3s;
+}
+main .wrapper #form .inputs .input:focus-within::before {
+  bottom: -0.4166666667vw;
+  right: -0.3645833333vw;
+}
+main .wrapper #form .inputs .agreement {
+  align-self: start;
+  display: flex;
+  align-items: center;
+  gap: 1.1979166667vw;
+}
+main .wrapper #form .inputs .agreement .custom_checkbox input {
+  display: none;
+}
+main .wrapper #form .inputs .agreement .custom_checkbox label {
+  display: block;
+  border: 2px solid #000000;
+  border-radius: 0.2604166667vw;
+  width: 1.5625vw;
+  height: 1.5625vw;
+  transition: 0.3s;
+}
+main .wrapper #form .inputs .agreement .custom_checkbox input:checked + label {
+  background-color: #000;
+}
+main .wrapper #form .inputs .agreement p {
+  cursor: default;
+  font-size: 0.9375vw;
+  line-height: 121%;
+}
+main .wrapper #form .inputs .agreement p a {
+  cursor: pointer;
+  color: #2175c9;
+  text-decoration: underline;
+  margin-left: 0.2604166667vw;
+  transition: 300ms;
+}
+main .wrapper #form .inputs .agreement p a:hover {
+  color: #003b75;
+}
+main .wrapper #form .inputs .agreement p span {
+  margin-left: 0.2604166667vw;
+}
+main .wrapper #form .inputs .submit_auth {
+  position: relative;
+  z-index: 1;
+}
+main .wrapper #form .inputs .submit_auth button {
+  background: #fff;
+  border: 3px solid #000000;
+  border-radius: 0.2604166667vw;
+  font-size: 1.25vw;
+  line-height: 121%;
+  padding: 1.09375vw 4.6875vw;
+  cursor: pointer;
+  font-weight: normal;
+}
+main .wrapper #form .inputs .submit_auth::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  background: #fff;
+  border: 3px solid #000000;
+  border-radius: 0.2604166667vw;
+  width: 100%;
+  height: 100%;
+  bottom: -0.4166666667vw;
+  right: -0.3645833333vw;
+  transition: 0.3s;
+}
+main .wrapper #form .inputs .submit_auth:hover::before {
+  bottom: 0;
+  right: 0;
+}
+main .wrapper #form .forget_password {
+  margin-top: 2.7604166667vw;
+  font-size: 1.25vw;
+  line-height: 121%;
+  text-decoration-line: underline;
+  color: #2175c9;
+  transition: 0.3s;
+}
+main .wrapper #form .forget_password:hover {
+  color: #003b75;
+}
+main .wrapper #form .switch_auth {
+  margin-top: 3.125vw;
+  margin-bottom: 1.0416666667vw;
+  cursor: default;
+  font-size: 1.25vw;
+  line-height: 121%;
+}
+main .wrapper #form .switch_auth a {
+  cursor: pointer;
+  color: #2175c9;
+  text-decoration: underline;
+  margin-left: 0.2604166667vw;
+  transition: 300ms;
+}
+main .wrapper #form .switch_auth a:hover {
+  color: #003b75;
+}
+main .wrapper .cover_image {
+  flex-grow: 1;
+}
+main .wrapper .cover_image.login {
+  width: 31.6666666667vw;
+  height: 31.875vw;
+  position: absolute;
+  top: -4.1666666667vw;
+  right: 0vw;
+}
+main .wrapper .cover_image.signup {
+  width: 41.1979166667vw;
+  height: 25.78125vw;
+  position: absolute;
+  top: 2.0833333333vw;
+  right: -6.25vw;
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  header .auth_logo {
+    padding-top: 2.0833333333vw;
+    gap: 0.5208333333vw;
+    margin-bottom: 2.6041666667vw;
+  }
+  header .auth_logo img {
+    width: 6.5104166667vw;
+    height: 6.5104166667vw;
+  }
+  header .auth_logo span {
+    font-size: 2.5vw;
+  }
+  header .auth_title * {
+    font-size: 3.3333333333vw;
+  }
+  header .auth_title__first {
+    padding-right: 0.3125vw;
+    padding-left: 0;
+    flex-grow: 1;
+    text-align: right;
+  }
+  header .auth_title__last {
+    padding-left: 0.3125vw;
+    flex-grow: 1;
+  }
+
+  main .wrapper {
+    padding-top: 3.125vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.8229166667vw;
+  }
+  main .wrapper #form {
+    width: 45.3125vw;
+  }
+  main .wrapper #form .inputs .input input {
+    padding: 1.25vw 1.4583333333vw;
+    font-size: 1.875vw;
+    padding-right: 3.125vw;
+  }
+  main .wrapper #form .inputs .input button {
+    width: 2.0833333333vw;
+    height: 2.0833333333vw;
+    top: calc((100% - 2.3vw) / 2);
+    right: 1.25vw;
+    background-size: 2.0833333333vw;
+  }
+  main .wrapper #form .inputs .input:focus-within::before {
+    bottom: -0.5208333333vw;
+    right: -0.46875vw;
+  }
+  main .wrapper #form .inputs .agreement {
+    gap: 1.5625vw;
+  }
+  main .wrapper #form .inputs .agreement .custom_checkbox label {
+    width: 3.125vw;
+    height: 3.125vw;
+  }
+  main .wrapper #form .inputs .agreement p {
+    font-size: 1.875vw;
+  }
+  main .wrapper #form .inputs .submit_auth button {
+    font-size: 2.7083333333vw;
+    padding: 1.4583333333vw 5.2083333333vw;
+  }
+  main .wrapper #form .inputs .submit_auth::before {
+    bottom: -0.5208333333vw;
+    right: -0.46875vw;
+  }
+  main .wrapper #form .forget_password {
+    margin-top: 3.9583333333vw;
+    font-size: 2.2916666667vw;
+  }
+  main .wrapper #form .switch_auth {
+    margin-top: 4.1666666667vw;
+    margin-bottom: 1.0416666667vw;
+    font-size: 2.2916666667vw;
+  }
+  main .wrapper .cover_image {
+    flex-grow: 1;
+  }
+  main .wrapper .cover_image.login {
+    width: 36.875vw;
+    height: 37.0833333333vw;
+    position: static;
+  }
+  main .wrapper .cover_image.signup {
+    width: 46.40625vw;
+    height: 30.9895833333vw;
+    position: static;
+  }
+}
+@media (max-width: 1024px) and (orientation: landscape) {
+  .wrapper {
+    width: 85%;
+  }
+
+  header .auth_logo {
+    padding-top: 1.8229166667vw;
+    gap: 0.5208333333vw;
+    margin-bottom: 2.0833333333vw;
+  }
+  header .auth_logo img {
+    width: 5.2083333333vw;
+    height: 5.2083333333vw;
+  }
+  header .auth_logo span {
+    font-size: 1.875vw;
+  }
+  header .auth_title * {
+    font-size: 2.8125vw;
+  }
+  header .auth_title__first {
+    padding-left: 6.3541666667vw;
+  }
+
+  main .wrapper {
+    padding-top: 2.6041666667vw;
+  }
+  main .wrapper #form {
+    width: 27.8645833333vw;
+  }
+  main .wrapper #form .inputs {
+    gap: 2.0833333333vw;
+  }
+  main .wrapper #form .inputs .input input {
+    padding-right: 2.6041666667vw;
+    font-size: 1.4583333333vw;
+  }
+  main .wrapper #form .inputs .input button {
+    right: 1.25vw;
+    background-size: 1.5104166667vw;
+  }
+  main .wrapper #form .inputs .agreement .custom_checkbox label {
+    width: 2.0833333333vw;
+    height: 2.0833333333vw;
+  }
+  main .wrapper #form .inputs .agreement p {
+    font-size: 1.25vw;
+  }
+  main .wrapper #form .inputs .submit_auth button {
+    font-size: 1.875vw;
+  }
+  main .wrapper #form .forget_password {
+    margin-top: 3.125vw;
+    font-size: 1.6666666667vw;
+  }
+  main .wrapper #form .switch_auth {
+    margin-top: 4.1666666667vw;
+    font-size: 1.6666666667vw;
+  }
+  main .wrapper .cover_image.login {
+    width: 36.875vw;
+    height: 37.0833333333vw;
+    top: -5.2083333333vw;
+  }
+  main .wrapper .cover_image.signup {
+    width: 44.3229166667vw;
+    height: 28.90625vw;
+    top: 2.0833333333vw;
+    right: -2.6041666667vw;
+  }
+}
+@media (max-width: 640px) {
+  .wrapper {
+    width: 92%;
+  }
+
+  header .auth_logo {
+    padding-top: 6.1333333333vw;
+    gap: 1.3333333333vw;
+    margin-bottom: 10.6666666667vw;
+  }
+  header .auth_logo img {
+    width: 18.6666666667vw;
+    height: 18.6666666667vw;
+  }
+  header .auth_logo span {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 90%;
+  }
+  header .auth_title {
+    display: flex;
+    flex-direction: column;
+    background: none;
+  }
+  header .auth_title * {
+    background-color: #000;
+    font-weight: 900;
+    font-size: 9.6vw;
+    padding-bottom: 0.5333333333vw;
+  }
+  header .auth_title__first {
+    padding-left: 0;
+    margin-bottom: 1.0666666667vw;
+    padding-right: 2.1333333333vw;
+  }
+  header .auth_title__last {
+    align-self: flex-end;
+    padding-left: 2.1333333333vw;
+  }
+  header .auth_title.login .auth_title__first {
+    width: 82.1333333333vw;
+  }
+  header .auth_title.login .auth_title__last {
+    width: 69.0666666667vw;
+  }
+  header .auth_title.signup .auth_title__first {
+    width: 87.2vw;
+  }
+  header .auth_title.signup .auth_title__last {
+    width: 78.6666666667vw;
+  }
+
+  main .wrapper {
+    padding-top: 13.6vw;
+  }
+  main .wrapper #form {
+    width: 100%;
+  }
+  main .wrapper #form .inputs {
+    gap: 5.3333333333vw;
+  }
+  main .wrapper #form .inputs .input input {
+    border-radius: 1.3333333333vw;
+    padding: 5.8666666667vw 4vw;
+    padding-right: 12vw;
+    font-size: 6.4vw;
+  }
+  main .wrapper #form .inputs .input button {
+    width: 6.4vw;
+    height: 6.4vw;
+    top: 7.4666666667vw;
+    right: 6.1333333333vw;
+    background-size: 6.4vw;
+  }
+  main .wrapper #form .inputs .input::before {
+    border-radius: 1.3333333333vw;
+  }
+  main .wrapper #form .inputs .input:focus-within::before {
+    bottom: -2.1333333333vw;
+    right: -1.8666666667vw;
+  }
+  main .wrapper #form .inputs .agreement {
+    margin-top: 2.6666666667vw;
+    gap: 6.1333333333vw;
+  }
+  main .wrapper #form .inputs .agreement.signup {
+    align-items: flex-start;
+  }
+  main .wrapper #form .inputs .agreement .custom_checkbox label {
+    border-radius: 1.3333333333vw;
+    width: 8vw;
+    height: 8vw;
+  }
+  main .wrapper #form .inputs .agreement p {
+    font-size: 4.8vw;
+  }
+  main .wrapper #form .inputs .submit_auth {
+    margin-top: 5.3333333333vw;
+  }
+  main .wrapper #form .inputs .submit_auth button {
+    width: 72vw;
+    border-radius: 1.3333333333vw;
+    font-size: 6.4vw;
+    padding: 5.6vw 0;
+  }
+  main .wrapper #form .inputs .submit_auth::before {
+    border-radius: 1.3333333333vw;
+    bottom: -2.1333333333vw;
+    right: -1.8666666667vw;
+  }
+  main .wrapper #form .forget_password {
+    margin-top: 10.6666666667vw;
+    font-size: 6.4vw;
+  }
+  main .wrapper #form .switch_auth {
+    margin-top: 16vw;
+    margin-bottom: 13.3333333333vw;
+    font-size: 6.4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .wrapper #form .switch_auth a {
+    margin: 0;
+  }
+  main .wrapper .cover_image {
+    display: none;
+  }
+}

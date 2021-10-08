@@ -1,0 +1,503 @@
+$screen-width: 1920;
+
+@function px-to-vw($value-width) {
+    @return $value-width * 100 / $screen-width+vw;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.user-container {
+    background: #000;
+    margin-top: 62px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    h1 {
+        margin-top: px-to-vw(-5);
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        width: 100%;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            margin-top: px-to-vw(54);
+            width: 75%;
+            height: px-to-vw(256);
+            background-color: #fff;
+        }
+    }
+
+
+    input[type=email] {
+        border: 3px solid #000000;
+        border-radius: 5px;
+        width: px-to-vw(470);
+        height: px-to-vw(70);
+        font-weight: normal;
+        font-size: 1vw;
+        line-height: 29px;
+        padding-left: 25px;
+        margin-top: px-to-vw(25);
+    }
+
+    .email-status {
+        font-weight: normal;
+        font-size: 1vw;
+        line-height: 29px;
+        color: #EA2323;
+        margin-top: px-to-vw(20);
+
+        span {
+            font-weight: normal;
+            font-size: 1vw;
+            line-height: 29px;
+            text-decoration-line: underline;
+            color: #2175C9;
+            margin-left: 20px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .change-pass {
+        font-weight: normal;
+        font-size: 1vw;
+        line-height: 29px;
+        /* identical to box height */
+        text-decoration-line: underline;
+        color: #2175C9;
+        background: none;
+        border: none;
+        margin-top: px-to-vw(35);
+        padding: 0;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .user-sec-img {
+        right: 0;
+        width: px-to-vw(370);
+    }
+
+}
+
+.user-info {
+    width: 100%;
+}
+
+.white-block {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: px-to-vw(400);
+    height: px-to-vw(260);
+    background-color: #fff;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;
+    color: #000;
+    margin: 0;
+
+    &::before {
+        display: none;
+    }
+}
+
+
+
+section.plans-info-container {
+    margin-top: px-to-vw(50);
+}
+
+.plans-info-container {
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .faq-cont {
+            max-width: px-to-vw(370);
+
+            h3 {
+                font-weight: bold;
+                font-size: px-to-vw(36);
+                line-height: px-to-vw(43);
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .faq-list_item .faq-item-header .item-title {
+                font-weight: 600;
+                font-size: 1vw;
+                line-height: px-to-vw(22);
+            }
+
+        }
+    }
+}
+
+.servises-list {
+    position: relative;
+}
+
+
+.purchased-item {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0675E1;
+    border: 5px solid #000000;
+    padding: px-to-vw(19) px-to-vw(45);
+    margin-bottom: px-to-vw(25);
+
+    .item-period {
+        font-weight: bold;
+        font-size: px-to-vw(36);
+        line-height: px-to-vw(43);
+        color: #FFFFFF;
+    }
+
+    .item-terms {
+        display: flex;
+        align-items: center;
+        font-size: px-to-vw(20);
+        color: #FFFFFF;
+        margin-left: 225px;
+
+        div {
+            width: px-to-vw(72);
+            height: 3px;
+            background-color: #FFFFFF;
+            transform: rotate(108.43deg);
+            margin: 0 px-to-vw(-20);
+        }
+
+        span {
+            font-weight: 300;
+            font-size: px-to-vw(20);
+            line-height: 1vw;
+            /* identical to box height */
+            color: #FFFFFF;
+        }
+
+        .payment {
+            font-weight: 300;
+            font-size: px-to-vw(64);
+            line-height: px-to-vw(77);
+            color: #FFFFFF;
+        }
+
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -5;
+        width: calc(100% + 5px);
+        height: calc(100% + 5px);
+        background: #FFFFFF;
+        border: 5px solid #000000;
+        right: px-to-vw(12);
+        top: px-to-vw(11);
+    }
+}
+
+.faq-list_item:not(:first-of-type) {
+    margin-top: px-to-vw(30);
+}
+
+.br {
+    display: none;
+}
+
+.servises-list {
+    margin-top: px-to-vw(30);
+}
+
+.faq-list_item p.faq-item_text {
+    font-size: px-to-vw(18);
+    line-height: px-to-vw(22);
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.br-1 {
+    display: none;
+}
+
+@media (max-width: 1800px) {
+    .wrapper {
+        width: 75% !important;
+    }
+
+}
+
+@media (max-width: 1400px) {
+
+    h1,
+    h2 {
+        font-size: 3.125vw;
+    }
+}
+
+@media(max-width: 1024px) {
+    $screen-width: 1024;
+
+    @function px-to-vw($value-width) {
+        @return $value-width * 100 / $screen-width+vw;
+    }
+
+    /* 1.75vw */
+    .plans-info-container .wrapper .faq-cont h3 {
+        font-size: 20px;
+    }
+
+    .plans-info-container {
+        .wrapper {
+            .faq-cont {
+
+                .faq-list_item .faq-item-header .item-title,
+                .faq-list_item p.faq-item_text {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+
+    .user-container input[type=email],
+    .user-container .email-status,
+    .user-container .email-status span,
+    .user-container .change-pass {
+        font-size: 14px;
+    }
+
+    .user-container .change-pass {
+        margin: 0;
+    }
+
+    .user-container .wrapper::before {
+        height: 136px;
+        margin-top: 30px;
+    }
+
+    .user-container h1 {
+        font-size: 32px;
+    }
+
+    .user-container .user-sec-img {
+        width: 197px;
+    }
+
+    .plans-info-container {
+        .wrapper {
+            .faq-cont {
+                max-width: 197px;
+            }
+        }
+    }
+
+    .white-block {
+        width: 213px;
+        height: 139px;
+    }
+
+    .user-container input[type=email] {
+        width: 251px;
+        height: 34px;
+    }
+
+    .purchased-item {
+        & * {
+            white-space: nowrap;
+        }
+
+        width: px-to-vw(400);
+
+        .item-terms {
+            margin: 0;
+        }
+
+        &::before {
+            right: 7px;
+            top: 7px;
+        }
+    }
+
+}
+
+@media(max-width: 785px) {
+    .br {
+        display: block;
+    }
+
+    .user-container .email-status {
+        line-height: 10px;
+        margin-top: 15px;
+    }
+
+    .user-container .email-status span {
+        margin: 0;
+    }
+}
+
+@media(max-width: 640px) {
+    .white-block {
+        display: none;
+    }
+
+    .plans-info-container .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-container {
+        margin-top: 40px;
+
+        .wrapper {
+            flex-direction: column;
+
+        }
+    }
+
+    .user-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-container .user-sec-img {
+        right: unset;
+        width: 375px;
+        margin-top: 50px;
+        align-self: center;
+    }
+
+    .user-container .wrapper::before {
+        align-self: center;
+        width: 100%;
+        right: 0;
+        left: unset;
+        height: 250px;
+        margin-top: 49px;
+    }
+
+    .user-container h1 {
+        font-size: 48px;
+    }
+
+    .user-container input[type=email] {
+        width: 345px;
+        height: 71px;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .user-container .email-status,
+    .user-container .email-status span,
+    .user-container .change-pass {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .user-container .change-pass {
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 43px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .purchased-item {
+        width: 345px;
+        height: 115px;
+        margin-bottom: 30px;
+    }
+
+    .purchased-item .item-terms div {
+        width: 8.75vw;
+        height: 2px;
+        margin: 0px -3.041667vw;
+    }
+
+    .br-1 {
+        display: block;
+    }
+
+    .purchased-item::before {
+        right: -13px;
+        top: 8px;
+    }
+
+    .purchased-item .item-period {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .purchased-item .item-terms .payment {
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 58px;
+    }
+
+    .purchased-item .item-terms span {
+        font-size: 20px;
+        line-height: 19px;
+    }
+
+    .plans-info-container .wrapper .faq-cont {
+        max-width: 345px;
+    }
+
+    .user-container input[type=email] {
+        margin-top: px-to-vw(30);
+    }
+
+    .faq-list_item hr.faq-item_bottom-border {
+        width: 90%;
+    }
+
+    .wrapper .faq-cont .faq-list_item p.faq-item_text,
+    .plans-info-container .wrapper .faq-cont .faq-list_item .faq-item-header .item-title {
+        font-size: 18px !important;
+        line-height: 16px !important;
+    }
+
+    section.plans-info-container {
+        margin-top: 50px;
+    }
+    .wrapper {
+        width: 92% !important; 
+    }
+}

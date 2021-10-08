@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../styles/auth-style.css">
+      <script src="../scripts/script.js"></script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+    </head>
+  <body>
+      <header> 
+        <div class="auth_logo"><img src="../img/desktop_logo.svg"><span>
+             VPN <br>OWL</span></div>
+        <div class="auth_title login">
+          <div class="auth_title__first">Log-in to your</div>
+          <div class="auth_title__last"> account</div>
+        </div>
+      </header>
+      <main>   
+        <div class="wrapper"> 
+          <div id="form"> 
+            <div class="inputs"> 
+              <div class="input"> 
+                <input name="email" placeholder="E-mail" type="email">
+              </div>
+              <div class="input"> 
+                <input name="password" placeholder="Password" type="password">
+                <button class="hidden"></button>
+              </div>
+              <div class="agreement login">
+                <div class="custom_checkbox"> 
+                  <input type="checkbox" id="agreement" name="agreement">
+                  <label for="agreement"></label>
+                </div>
+                <p>Keep me logged in
+                </p>
+              </div>
+              <div class="submit_auth"> 
+                <button>LOG IN</button>
+              </div>
+            </div><a class="forget_password" href="#">I forgot my password</a>
+            <div class="switch_auth"> Don't have an account?<a href="./registration.html">Sign up</a>
+            </div>
+          </div><img class="cover_image login" src="../img/login.svg">
+        </div>
+      </main>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+mixin _head
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="../styles/style.css")
+        script(src="../scripts/script.dev.js" defer) 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+mixin _header
+    header
+        .wrapper
+            .logo
+                img.logo_img(src="../img/desktop_logo.svg")
+                p.logo_service-name
+                    | VPN 
+                    br
+                    | OWL
+            nav
+                each val in ['Services', 'Contacts','Order', 'Help']
+                    a.nav_link(href='#')= val
+            a.account_button(href="#") 
+            .burger_menu__icon
+                span 
+            .burger_menu__body
+                each val in ['Services', 'Contacts','Order', 'Help']
+                    a.nav_link__mobile(href='#')= val
+            a(href="login.html") 
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.7476 20L19.9976 15L13.7476 10V13.75H2.49756V16.25H13.7476V20Z" fill="white" />
+                    <path d="M16.2487 3.74876C14.7706 3.74466 13.3064 4.0339 11.9409 4.59972C10.5754 5.16553 9.33571 5.99668 8.2937 7.04501L10.0612 8.81251C11.7137 7.16001 13.9112 6.24876 16.2487 6.24876C18.5862 6.24876 20.7837 7.16001 22.4362 8.81251C24.0887 10.465 25 12.6625 25 15C25 17.3375 24.0887 19.535 22.4362 21.1875C20.7837 22.84 18.5862 23.7513 16.2487 23.7513C13.9112 23.7513 11.7137 22.84 10.0612 21.1875L8.2937 22.955C10.4175 25.08 13.2425 26.2513 16.2487 26.2513C19.255 26.2513 22.08 25.08 24.2037 22.955C26.3287 20.8313 27.5 18.0063 27.5 15C27.5 11.9938 26.3287 9.16876 24.2037 7.04501C23.1617 5.99668 21.922 5.16553 20.5565 4.59972C19.191 4.0339 17.7268 3.74466 16.2487 3.74876Z" fill="white" />
+                </svg>
+
+mixin _footer
+    footer
+        .wrapper
+            .links
+                .links_list
+                    each val in ['VPN OWL', 'Contacts', 'Services', 'Order', 'Help']
+                        a.links_list__link(href='#')= val
+
+                .links_list
+                    each val in ['PROGRAMMS', 'Affiliate', 'Student discount', 'YouTube creators', 'Refer a friend']
+                        a.links_list__link(href='#')= val
+
+                .links_list
+                    each val in ['TITLE', 'Link', 'Link', 'Link', 'Link']
+                        a.links_list__link(href='#')= val
+
+                .links_list
+                    each val in ['TITLE', 'Link', 'Link', 'Link', 'Link']
+                        a.links_list__link(href='#')= val
+            .social-networks
+                span.social-networks_title Get in touch:
+                .social-networks_logos
+                    a(href="#")
+                        img(src="../img/fb.svg" alt="FB-logo") 
+                    a(href="#")
+                        img(src="../img/inst.svg" alt="Inst-logo")
+                    a(href="#")
+                        img(src="../img/vk.svg" alt="VK-logo")
+
+mixin _head__auth
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="../styles/auth-style.css")
+        script(src="../scripts/script.js")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+mixin _auth(type, first_title, last_title, submit, image, ...inputs)
+    header 
+        .auth_logo
+            img(src="../img/desktop_logo.svg")
+            span 
+                | VPN 
+                br
+                | OWL
+        .auth_title(class=type)
+            .auth_title__first= first_title
+            .auth_title__last= last_title
+    main    
+        .wrapper 
+            #form 
+                .inputs 
+                    each input in inputs
+                        .input 
+                            input(name=input.name, placeholder=input.placeholder, type=input.type)
+                            if input.type === 'password'
+                                button.hidden
+                    .agreement(class=type)
+                        .custom_checkbox 
+                            input(type="checkbox" id="agreement" name="agreement")
+                            label(for="agreement")
+                        p
+                            if type === 'login'
+                                | Keep me logged in
+                            else
+                                |By registering to our Service, you agree with our
+                                a(href="#") Terms and Conditions
+                                span and
+                                a(href="#") Privacy Policy
+                                |.
+                    .submit_auth 
+                        button= submit
+                if type === 'login'
+                    a(href="#" class="forget_password") I forgot my password
+                .switch_auth 
+                    if type === 'login'
+                        |Don't have an account?
+                        a(href="./registration.html") Sign up
+                    else 
+                        |Already have an account?
+                        a(href="./registration.html") Log in
+            img.cover_image(src=image, class=type)
+

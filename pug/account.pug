@@ -1,0 +1,59 @@
+doctype html
+html(lang="ru")
+    include mixins.pug 
+    +_head
+    link(rel="stylesheet" href="../styles/account-style.css")
+    title VPN Owl - Account
+    body
+        +_header
+        section.user-container 
+            .wrapper
+                .user-info
+                    h1.username Username
+                    div
+                        input(type="email" readonly value="example@email.ru ")
+                        p.email-status Your mail has not been verified!
+                            br.br
+                            span Send verification letter
+                        button.change-pass Change password
+                img.user-sec-img(src="../img/pic-lock.jpg" alt="")
+            .white-block
+
+        section.plans-info-container
+            .wrapper
+                .active-plans
+                    h2 Purchased services
+                    .servises-list
+                        .purchased-item
+                            span.item-period 1 YEAR
+                            .item-terms
+                                span.payment 10$
+                                div
+                                span per 
+                                    br.br-1
+                                    | month
+                        .purchased-item
+                            span.item-period 1 YEAR
+                            .item-terms
+                                span.payment 10$
+                                div
+                                span per 
+                                    br.br-1
+                                    | month
+                .faq-cont    
+                    h3 FAQ
+                    .faq-wrapper
+                        .faq-list
+                            -var i = 1
+                            while i <= 4
+                                .faq-list_item
+                                    .faq-item-header
+                                        span.item-title Lorem ipsum dolor sit amet
+                                        button.faq-item_switch-arrow(id='faq-'+i onclick="openAnswer(this)")
+                                            <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M23 13L12 2L0.999997 13" stroke="black" stroke-width="2" />
+                                            </svg>
+                                    .faq-item_text-container(id='p-faq-'+i++)
+                                        p.faq-item_text Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                    hr.faq-item_bottom-border
+        +_footer

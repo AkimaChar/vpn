@@ -1,0 +1,437 @@
+* {
+  box-sizing: border-box;
+}
+
+.user-container {
+  background: #000;
+  margin-top: 62px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.user-container h1 {
+  margin-top: -0.2604166667vw;
+}
+.user-container h1::before {
+  display: none;
+}
+.user-container .wrapper {
+  display: flex;
+  width: 100%;
+  z-index: 1;
+}
+.user-container .wrapper::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  margin-top: 2.8125vw;
+  width: 75%;
+  height: 13.3333333333vw;
+  background-color: #fff;
+}
+.user-container input[type=email] {
+  border: 3px solid #000000;
+  border-radius: 5px;
+  width: 24.4791666667vw;
+  height: 3.6458333333vw;
+  font-weight: normal;
+  font-size: 1vw;
+  line-height: 29px;
+  padding-left: 25px;
+  margin-top: 1.3020833333vw;
+}
+.user-container .email-status {
+  font-weight: normal;
+  font-size: 1vw;
+  line-height: 29px;
+  color: #EA2323;
+  margin-top: 1.0416666667vw;
+}
+.user-container .email-status span {
+  font-weight: normal;
+  font-size: 1vw;
+  line-height: 29px;
+  text-decoration-line: underline;
+  color: #2175C9;
+  margin-left: 20px;
+}
+.user-container .email-status span:hover {
+  cursor: pointer;
+}
+.user-container .change-pass {
+  font-weight: normal;
+  font-size: 1vw;
+  line-height: 29px;
+  /* identical to box height */
+  text-decoration-line: underline;
+  color: #2175C9;
+  background: none;
+  border: none;
+  margin-top: 1.8229166667vw;
+  padding: 0;
+}
+.user-container .change-pass:hover {
+  cursor: pointer;
+}
+.user-container .user-sec-img {
+  right: 0;
+  width: 19.2708333333vw;
+}
+
+.user-info {
+  width: 100%;
+}
+
+.white-block {
+  position: absolute;
+  right: 0;
+  top: 15px;
+  width: 20.8333333333vw;
+  height: 13.5416666667vw;
+  background-color: #fff;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  color: #000;
+  margin: 0;
+}
+h2::before {
+  display: none;
+}
+
+section.plans-info-container {
+  margin-top: 2.6041666667vw;
+}
+
+.plans-info-container .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.plans-info-container .wrapper .faq-cont {
+  max-width: 19.2708333333vw;
+}
+.plans-info-container .wrapper .faq-cont h3 {
+  font-weight: bold;
+  font-size: 1.875vw;
+  line-height: 2.2395833333vw;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.plans-info-container .wrapper .faq-cont .faq-list_item .faq-item-header .item-title {
+  font-weight: 600;
+  font-size: 1vw;
+  line-height: 1.1458333333vw;
+}
+
+.servises-list {
+  position: relative;
+}
+
+.purchased-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0675E1;
+  border: 5px solid #000000;
+  padding: 0.9895833333vw 2.34375vw;
+  margin-bottom: 1.3020833333vw;
+}
+.purchased-item .item-period {
+  font-weight: bold;
+  font-size: 1.875vw;
+  line-height: 2.2395833333vw;
+  color: #FFFFFF;
+}
+.purchased-item .item-terms {
+  display: flex;
+  align-items: center;
+  font-size: 1.0416666667vw;
+  color: #FFFFFF;
+  margin-left: 225px;
+}
+.purchased-item .item-terms div {
+  width: 3.75vw;
+  height: 3px;
+  background-color: #FFFFFF;
+  transform: rotate(108.43deg);
+  margin: 0 -1.0416666667vw;
+}
+.purchased-item .item-terms span {
+  font-weight: 300;
+  font-size: 1.0416666667vw;
+  line-height: 1vw;
+  /* identical to box height */
+  color: #FFFFFF;
+}
+.purchased-item .item-terms .payment {
+  font-weight: 300;
+  font-size: 3.3333333333vw;
+  line-height: 4.0104166667vw;
+  color: #FFFFFF;
+}
+.purchased-item::before {
+  content: "";
+  position: absolute;
+  z-index: -5;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  background: #FFFFFF;
+  border: 5px solid #000000;
+  right: 0.625vw;
+  top: 0.5729166667vw;
+}
+
+.faq-list_item:not(:first-of-type) {
+  margin-top: 1.5625vw;
+}
+
+.br {
+  display: none;
+}
+
+.servises-list {
+  margin-top: 1.5625vw;
+}
+
+.faq-list_item p.faq-item_text {
+  font-size: 0.9375vw;
+  line-height: 1.1458333333vw;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+.br-1 {
+  display: none;
+}
+
+@media (max-width: 1800px) {
+  .wrapper {
+    width: 75% !important;
+  }
+}
+@media (max-width: 1400px) {
+  h1,
+h2 {
+    font-size: 3.125vw;
+  }
+}
+@media (max-width: 1024px) {
+  /* 1.75vw */
+  .plans-info-container .wrapper .faq-cont h3 {
+    font-size: 20px;
+  }
+
+  .plans-info-container .wrapper .faq-cont .faq-list_item .faq-item-header .item-title,
+.plans-info-container .wrapper .faq-cont .faq-list_item p.faq-item_text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .user-container input[type=email],
+.user-container .email-status,
+.user-container .email-status span,
+.user-container .change-pass {
+    font-size: 14px;
+  }
+
+  .user-container .change-pass {
+    margin: 0;
+  }
+
+  .user-container .wrapper::before {
+    height: 136px;
+    margin-top: 30px;
+  }
+
+  .user-container h1 {
+    font-size: 32px;
+  }
+
+  .user-container .user-sec-img {
+    width: 197px;
+  }
+
+  .plans-info-container .wrapper .faq-cont {
+    max-width: 197px;
+  }
+
+  .white-block {
+    width: 213px;
+    height: 139px;
+  }
+
+  .user-container input[type=email] {
+    width: 251px;
+    height: 34px;
+  }
+
+  .purchased-item {
+    width: 39.0625vw;
+  }
+  .purchased-item * {
+    white-space: nowrap;
+  }
+  .purchased-item .item-terms {
+    margin: 0;
+  }
+  .purchased-item::before {
+    right: 7px;
+    top: 7px;
+  }
+}
+@media (max-width: 785px) {
+  .br {
+    display: block;
+  }
+
+  .user-container .email-status {
+    line-height: 10px;
+    margin-top: 15px;
+  }
+
+  .user-container .email-status span {
+    margin: 0;
+  }
+}
+@media (max-width: 640px) {
+  .white-block {
+    display: none;
+  }
+
+  .plans-info-container .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-container {
+    margin-top: 40px;
+  }
+  .user-container .wrapper {
+    flex-direction: column;
+  }
+
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-container .user-sec-img {
+    right: unset;
+    width: 375px;
+    margin-top: 50px;
+    align-self: center;
+  }
+
+  .user-container .wrapper::before {
+    align-self: center;
+    width: 100%;
+    right: 0;
+    left: unset;
+    height: 250px;
+    margin-top: 49px;
+  }
+
+  .user-container h1 {
+    font-size: 48px;
+  }
+
+  .user-container input[type=email] {
+    width: 345px;
+    height: 71px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .user-container .email-status,
+.user-container .email-status span,
+.user-container .change-pass {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .user-container .change-pass {
+    margin-top: 20px;
+  }
+
+  h2 {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .purchased-item {
+    width: 345px;
+    height: 115px;
+    margin-bottom: 30px;
+  }
+
+  .purchased-item .item-terms div {
+    width: 8.75vw;
+    height: 2px;
+    margin: 0px -3.041667vw;
+  }
+
+  .br-1 {
+    display: block;
+  }
+
+  .purchased-item::before {
+    right: -13px;
+    top: 8px;
+  }
+
+  .purchased-item .item-period {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .purchased-item .item-terms .payment {
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  .purchased-item .item-terms span {
+    font-size: 20px;
+    line-height: 19px;
+  }
+
+  .plans-info-container .wrapper .faq-cont {
+    max-width: 345px;
+  }
+
+  .user-container input[type=email] {
+    margin-top: 1.5625vw;
+  }
+
+  .faq-list_item hr.faq-item_bottom-border {
+    width: 90%;
+  }
+
+  .wrapper .faq-cont .faq-list_item p.faq-item_text,
+.plans-info-container .wrapper .faq-cont .faq-list_item .faq-item-header .item-title {
+    font-size: 18px !important;
+    line-height: 16px !important;
+  }
+
+  section.plans-info-container {
+    margin-top: 50px;
+  }
+
+  .wrapper {
+    width: 92% !important;
+  }
+}
